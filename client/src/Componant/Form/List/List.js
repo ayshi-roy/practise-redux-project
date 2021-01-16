@@ -7,7 +7,7 @@ import Navbar from '../../Navbar/Navbar';
 const List = (props) => {
     
     const {cart, removeFromData} = props;
-    console.log(cart);
+    
     
     const [userInformations, setUserInformations] = useState([]);
 
@@ -35,7 +35,7 @@ const List = (props) => {
                         </thead>
                         <tbody>
                             { userInformations.map((user,index) =>
-                                <tr>
+                                <tr key={user._id}>
                                     <th scope="row">{index+1}</th>
                                     <th>{user._id}</th>
                                     <td>{user.firstName}</td>

@@ -7,7 +7,7 @@ import './Form.css';
 
 const Form = (props) => {
     
-    const {addUser,cart} = props;
+    const {addUser,user} = props;
     console.log(props);
     const { register, errors, handleSubmit } = useForm(); 
     
@@ -24,28 +24,28 @@ const Form = (props) => {
                     {errors.firstName && "First name is required"}
                     <input name="lastName" placeholder="Last Name"className="name" ref={register({ required: true })} />
                     {errors.lastName && "Last name is required"}
-                    <input name="email" placeholder="Email" className="name" ref={register({ required: true })} />
+                    <input name="email" type="email" placeholder="Email" className="name" ref={register({ required: true })} />
                     {errors.email && "Email is required"}
-                    <input name="phone" placeholder="Phone Number" className="name" ref={register({ required: true })} />
+                    <input name="phone" type="number" placeholder="Phone Number" className="name" ref={register({ required: true })} />
                     {errors.phone && "Phone number is required"}
                     <input id="btn" class="login" type="submit" />
                 </form>
             </div> 
-            <div>
+            {/* <div>
                 {
-                    cart.map(person =>{
+                    user.map(person =>{
                     return (<li key={person.phone}>{person.firstName}</li>)
                     })
                 }
-            </div>          
+            </div>           */}
         </div>
     );
 };
 
 const mapStateToProps = state => {
     return {
-        cart: state.cart,
-        products: state.products
+        user: state.users
+        // products: state.products
     }
 }
 const mapDispatchToProps = {

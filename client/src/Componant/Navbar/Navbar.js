@@ -26,7 +26,9 @@ const Navbar = () => {
                             </Link>                                                        
                         </li>
                         <li className="nav-item">                            
-                            <a className="nav-link text-white mr-5" href="#about">About Us</a>                                                            
+                            <Link to="/allList" style={{textDecoration: "none"}}>
+                                <a className="nav-link text-white mr-5" href="#">All User Lists</a>
+                            </Link>                                                           
                         </li>
                         <li className="nav-item">
                             <a className="nav-link text-white mr-5" href="#contact">Contact Us</a>                            

@@ -9,6 +9,7 @@ import {
   Link
 } from "react-router-dom";
 import Home from './Componant/Home/Home';
+import Persons from './Componant/Form/List/Persons';
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           </Route>
           <Route path="/list">
             <List></List>
+          </Route>
+          <Route path="/allList">
+            <Persons></Persons>
           </Route>
           <Route path="/">
             <Home />

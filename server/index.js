@@ -18,6 +18,7 @@ const port = 5000
 const client = new MongoClient(uri, { useNewUrlParser: true,useUnifiedTopology: true });
 client.connect(err => {
   const collection = client.db("InternProject").collection("userInformation");
+  console.log("database connected");
   
   app.post('/fillUpData', (req, res) => {
       const userData = req.body;      
